@@ -1,8 +1,8 @@
-# vLLM-Omni for TTS (audio generation capabilities)
-git+https://github.com/Alibaba-NLP/vllm-omni.git@main
+# Qwen3-TTS toolkit (official PyPI package)
+qwen-tts
 
-# Qwen3-TTS toolkit
-git+https://github.com/QwenLM/Qwen3-TTS.git@main
+# vLLM-Omni for TTS (if needed for serving)
+# git+https://github.com/vllm-project/vllm-omni.git@main
 
 # Core ML
 torch==2.7.0

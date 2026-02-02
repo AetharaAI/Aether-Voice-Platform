@@ -1,5 +1,5 @@
-# vLLM with Qwen3-Omni support (wangxiongts fork)
-git+https://github.com/wangxiongts/vllm.git@qwen3_omni
+# vLLM-Omni for Qwen3-Omni support (official repo)
+git+https://github.com/vllm-project/vllm-omni.git@main
 
 # Core ML
 torch==2.7.0

@@ -18,23 +18,17 @@ RUN apt-get update && apt-get install -y \
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install vLLM-Omni fork (specific commit for TTS)
-# This is a different fork than Omni service - this one supports audio generation
+# Install Qwen3-TTS from PyPI (official package)
 RUN pip install --no-cache-dir \
-    git+https://github.com/Alibaba-NLP/vllm-omni.git@main \
-    || echo "Using alternative installation method"
+    qwen-tts
 
-# If git install fails, we'll install from PyPI fallback
+# Core ML
 RUN pip install --no-cache-dir \
     torch==2.7.0 \
     torchaudio==2.7.0 \
     transformers==4.51.3 \
-    accelerate==0.30.1
-
-# Install Qwen3-TTS package
-RUN pip install --no-cache-dir \
-    git+https://github.com/QwenLM/Qwen3-TTS.git@main \
-    || echo "Qwen3-TTS will be installed from source"
+    accelerate==0.30.1 \
+    numpy==2.2.0
 
 # API and audio processing dependencies
 RUN pip install --no-cache-dir \
@@ -42,7 +36,6 @@ RUN pip install --no-cache-dir \
     uvicorn[standard]==0.34.2 \
     python-multipart==0.0.20 \
     pydantic==2.11.0 \
-    numpy==2.2.0 \
     soundfile==0.13.1 \
     librosa==0.11.0 \
     audioread==3.0.1 \

@@ -19,11 +19,10 @@ RUN apt-get update && apt-get install -y \
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install specific vLLM branch for Qwen3-Omni
-# This is the wangxiongts/vllm fork with qwen3_omni branch
+# Install vLLM-Omni for Qwen3 support
+# Using the official vllm-project/vllm-omni repository
 RUN pip install --no-cache-dir \
-    git+https://github.com/wangxiongts/vllm.git@qwen3_omni \
-    || pip install --no-cache-dir vllm==0.9.2
+    git+https://github.com/vllm-project/vllm-omni.git@main
 
 # Core dependencies
 RUN pip install --no-cache-dir \
