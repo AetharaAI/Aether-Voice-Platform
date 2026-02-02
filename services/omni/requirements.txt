@@ -1,0 +1,21 @@
+# vLLM with Qwen3-Omni support (wangxiongts fork)
+git+https://github.com/wangxiongts/vllm.git@qwen3_omni
+
+# Core ML
+torch==2.6.0
+torchaudio==2.6.0
+transformers==4.51.3
+accelerate==0.30.1
+numpy==2.1.2
+scipy==1.15.2
+
+# API & Communication
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+websockets==15.0.1
+python-multipart==0.0.20
+pydantic==2.11.0
+
+# Audio Processing
+soundfile==0.13.1
+librosa==0.11.0

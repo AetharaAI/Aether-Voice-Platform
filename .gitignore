@@ -1,0 +1,274 @@
+# =============================================================================
+# Aether Voice Platform - Git Ignore
+# AetherPro Technologies 2026
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -----------------------------------------------------------------------------
+# Virtual Environments
+# -----------------------------------------------------------------------------
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+.python-version
+
+# -----------------------------------------------------------------------------
+# IDE & Editors
+# -----------------------------------------------------------------------------
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------------------------------------------------------
+# Docker
+# -----------------------------------------------------------------------------
+.dockerignore
+Dockerfile.*
+!Dockerfile
+docker-compose.*.yml
+!docker-compose.yml
+.docker/
+*.dockerfile
+
+# -----------------------------------------------------------------------------
+# Logs & Databases
+# -----------------------------------------------------------------------------
+*.log
+*.log.*
+logs/
+log/
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+
+# -----------------------------------------------------------------------------
+# Testing & Coverage
+# -----------------------------------------------------------------------------
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# -----------------------------------------------------------------------------
+# Type Checking
+# -----------------------------------------------------------------------------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# -----------------------------------------------------------------------------
+# Jupyter Notebook
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints
+*.ipynb
+
+# -----------------------------------------------------------------------------
+# Model Files & Large Binaries
+# -----------------------------------------------------------------------------
+# Never commit model weights
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.tflite
+*.mlmodel
+*.pb
+
+# Model directories
+models/
+checkpoints/
+weights/
+pretrained/
+
+# Audio files
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aac
+*.wma
+
+# -----------------------------------------------------------------------------
+# Environment & Secrets
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.development
+!.env.example
+!.env.template
+
+# Secrets
+secrets/
+secrets.yml
+secrets.yaml
+secrets.json
+*.pem
+*.key
+*.crt
+*.csr
+.ssh/
+
+# -----------------------------------------------------------------------------
+# Kubernetes & Helm
+# -----------------------------------------------------------------------------
+*.yaml.dec
+*.yml.dec
+*.yaml.decrypted
+*.yml.decrypted
+helm/charts/
+helm/requirements.lock
+
+# -----------------------------------------------------------------------------
+# Terraform
+# -----------------------------------------------------------------------------
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# -----------------------------------------------------------------------------
+# Redis
+# -----------------------------------------------------------------------------
+dump.rdb
+*.rdb
+appendonly.aof
+
+# -----------------------------------------------------------------------------
+# OS Generated
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------------------------------------------------------
+# AetherPro Specific
+# -----------------------------------------------------------------------------
+# Local development overrides
+local.yml
+local.yaml
+local.env
+
+# Temporary test outputs
+tmp/
+temp/
+temp_*/
+test_output/
+test_outputs/
+
+# Benchmark results
+benchmark_results/
+performance_reports/
+latency_reports/
+
+# License enforcement cache
+.license_cache/
+.aetherpro/
+
+# -----------------------------------------------------------------------------
+# License Files (Never Ignore - Keep in Version Control)
+# -----------------------------------------------------------------------------
+# !LICENSE
+# !THIRD_PARTY_LICENSES
+# Note: Uncomment above to track license files in git
+
+# -----------------------------------------------------------------------------
+# Build Artifacts
+# -----------------------------------------------------------------------------
+*.tar.gz
+*.zip
+*.7z
+*.rar
+dist/
+build/
+out/
+target/

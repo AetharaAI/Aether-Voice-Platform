@@ -1,0 +1,408 @@
+================================================================================
+                    THIRD-PARTY LICENSE NOTICES
+                      Aether Voice Platform
+================================================================================
+
+This document contains license notices for third-party software components
+included in or used by the Aether Voice Platform.
+
+================================================================================
+1. VLLM (Inference Engine)
+================================================================================
+
+Project:     vLLM
+Repository:  https://github.com/vllm-project/vllm
+License:     Apache License 2.0
+
+Copyright 2023-2024 vLLM Team
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--------------------------------------------------------------------------------
+
+Additional vLLM Fork for Qwen3-Omni:
+Repository: https://github.com/wangxiongts/vllm (qwen3_omni branch)
+Maintained by: Alibaba NLP Group
+License: Apache License 2.0
+
+================================================================================
+2. PYTORCH (Deep Learning Framework)
+================================================================================
+
+Project:     PyTorch
+Repository:  https://github.com/pytorch/pytorch
+License:     BSD 3-Clause License
+
+Copyright (c) 2016-present, Facebook, Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+3. Neither the names of Facebook, Deepmind Technologies, NYU, NEC Laboratories
+   America and IDIAP Research Institute nor the names of its contributors may
+   be used to endorse or promote products derived from this software without
+   specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+================================================================================
+3. TRANSFORMERS (Hugging Face)
+================================================================================
+
+Project:     Transformers
+Repository:  https://github.com/huggingface/transformers
+License:     Apache License 2.0
+
+Copyright 2018- The Hugging Face Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+================================================================================
+4. FASTAPI
+================================================================================
+
+Project:     FastAPI
+Repository:  https://github.com/tiangolo/fastapi
+License:     MIT License
+
+Copyright (c) 2018 Sebastián Ramírez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+5. UVICORN
+================================================================================
+
+Project:     Uvicorn
+Repository:  https://github.com/encode/uvicorn
+License:     BSD 3-Clause License
+
+Copyright © 2019-present, Encode OSS Ltd. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+================================================================================
+6. NUMPY
+================================================================================
+
+Project:     NumPy
+Repository:  https://github.com/numpy/numpy
+License:     BSD 3-Clause License
+
+Copyright (c) 2005-2024, NumPy Developers.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above
+  copyright notice, this list of conditions and the following
+  disclaimer in the documentation and/or other materials provided
+  with the distribution.
+
+* Neither the name of the NumPy Developers nor the names of any
+  contributors may be used to endorse or promote products derived
+  from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+================================================================================
+7. LIBROSA (Audio Processing)
+================================================================================
+
+Project:     librosa
+Repository:  https://github.com/librosa/librosa
+License:     ISC License
+
+Copyright (c) 2013--2023, librosa development team.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+================================================================================
+8. SOUNDFILE
+================================================================================
+
+Project:     python-soundfile
+Repository:  https://github.com/bastibe/python-soundfile
+License:     BSD 3-Clause License
+
+Copyright (c) 2013, Matthias C. M. Troffaes
+Copyright (c) 2014, Bastian Bechtold
+All rights reserved.
+
+================================================================================
+9. REDIS-PY
+================================================================================
+
+Project:     redis-py
+Repository:  https://github.com/redis/redis-py
+License:     MIT License
+
+Copyright (c) 2022 Redis Inc.
+Copyright (c) 2012-2022, Andy McCurdy
+
+================================================================================
+10. WEBSOCKETS
+================================================================================
+
+Project:     websockets
+Repository:  https://github.com/python-websockets/websockets
+License:     BSD 3-Clause License
+
+Copyright (c) Aymeric Augustin and contributors
+All rights reserved.
+
+================================================================================
+11. QWEN3 MODELS
+================================================================================
+
+Project:     Qwen3 (Qwen3-ASR, Qwen3-TTS, Qwen3-Omni)
+Repository:  https://github.com/QwenLM/Qwen3
+             https://github.com/QwenLM/Qwen3-TTS
+License:     Qwen License Agreement / Tongyi Qianwen License
+
+Copyright (c) Alibaba Cloud. All rights reserved.
+
+The Qwen3 models are subject to the Qwen License Agreement. You are required
+to comply with the terms of the Qwen License when using these models.
+
+Key terms:
+- Models are provided for research and commercial use with conditions
+- You may not use the models for illegal activities
+- You may not claim ownership of the models
+- Model weights may have specific usage restrictions
+
+Full license: https://github.com/QwenLM/Qwen3/blob/main/LICENSE
+
+================================================================================
+12. ACCELERATE (Hugging Face)
+================================================================================
+
+Project:     Accelerate
+Repository:  https://github.com/huggingface/accelerate
+License:     Apache License 2.0
+
+Copyright 2021 The Hugging Face Team. All rights reserved.
+
+================================================================================
+13. PYDANTIC
+================================================================================
+
+Project:     Pydantic
+Repository:  https://github.com/pydantic/pydantic
+License:     MIT License
+
+Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors.
+
+================================================================================
+14. PYDUB
+================================================================================
+
+Project:     pydub
+Repository:  https://github.com/jiaaro/pydub
+License:     MIT License
+
+Copyright (c) 2011 James Robert
+
+================================================================================
+15. SCIPY
+================================================================================
+
+Project:     SciPy
+Repository:  https://github.com/scipy/scipy
+License:     BSD 3-Clause License
+
+Copyright (c) 2001-2002 Enthought, Inc.
+Copyright (c) 2003-2024 SciPy Developers.
+All rights reserved.
+
+================================================================================
+16. PROMETHEUS CLIENT
+================================================================================
+
+Project:     prometheus_client
+Repository:  https://github.com/prometheus/client_python
+License:     Apache License 2.0
+
+Copyright 2015 The Prometheus Authors
+
+================================================================================
+17. ORJSON
+================================================================================
+
+Project:     orjson
+Repository:  https://github.com/ijl/orjson
+License:     Apache License 2.0 / MIT License (dual-licensed)
+
+Copyright 2018 ijl <ijl@mailbox.org>
+
+================================================================================
+18. PYTHON-MULTIPART
+================================================================================
+
+Project:     python-multipart
+Repository:  https://github.com/andrew-d/python-multipart
+License:     Apache License 2.0
+
+Copyright (c) Andrew Dunham
+
+================================================================================
+19. TENACITY
+================================================================================
+
+Project:     tenacity
+Repository:  https://github.com/jd/tenacity
+License:     Apache License 2.0
+
+Copyright 2016-2023 Julien Danjou
+
+================================================================================
+20. PYTHON-JOSE
+================================================================================
+
+Project:     python-jose
+Repository:  https://github.com/mpdavis/python-jose
+License:     MIT License
+
+Copyright (c) Michael Davis
+
+================================================================================
+21. PASSLIB
+================================================================================
+
+Project:     passlib
+Repository:  https://foss.heptapod.net/python-libs/passlib
+License:     BSD 3-Clause License
+
+Copyright (c) 2008-2022 Eli Collins
+
+================================================================================
+                    FULL LICENSE TEXTS
+================================================================================
+
+Full texts of the Apache License 2.0, MIT License, and BSD 3-Clause License
+are available at:
+
+- Apache License 2.0:  https://www.apache.org/licenses/LICENSE-2.0
+- MIT License:         https://opensource.org/licenses/MIT
+- BSD 3-Clause:        https://opensource.org/licenses/BSD-3-Clause
+- ISC License:         https://opensource.org/licenses/ISC
+
+================================================================================
+                    NOTICE TO USERS
+================================================================================
+
+The Aether Voice Platform integrates these third-party components under their
+respective open source licenses. AetherPro Technologies:
+
+1. Does NOT claim ownership of third-party components
+2. Complies with all attribution requirements
+3. Makes source code available where required by copyleft licenses
+4. Acknowledges the contributions of all open source projects
+
+For questions about licensing or to report issues, contact:
+AetherPro Technologies - legal@aetherpro.com
+
+================================================================================
+                    END OF THIRD-PARTY LICENSES
+================================================================================

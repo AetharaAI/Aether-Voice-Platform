@@ -1,0 +1,156 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: aether-voice-redis
+    ports:
+      - "${REDIS_PORT}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - aether-voice-net
+
+  asr-service:
+    build:
+      context: ./services/asr
+      dockerfile: Dockerfile
+    container_name: aether-asr
+    runtime: nvidia
+    environment:
+      - CUDA_VISIBLE_DEVICES=${GPU_DEVICE_ID}
+      - MODEL_PATH=${ASR_MODEL_PATH}
+      - PORT=${ASR_PORT}
+      - VLLM_WORKERS=${VLLM_WORKERS}
+      - VLLM_MAX_MODEL_LEN=${VLLM_MAX_MODEL_LEN}
+      - VLLM_GPU_MEMORY_UTILIZATION=${VLLM_GPU_MEMORY_UTILIZATION}
+    volumes:
+      - ${MODEL_BASE_PATH}:/models:ro
+    ports:
+      - "${ASR_PORT}:${ASR_PORT}"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${ASR_PORT}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - aether-voice-net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  tts-service:
+    build:
+      context: ./services/tts
+      dockerfile: Dockerfile
+    container_name: aether-tts
+    runtime: nvidia
+    environment:
+      - CUDA_VISIBLE_DEVICES=${GPU_DEVICE_ID}
+      - MODEL_PATH=${TTS_MODEL_PATH}
+      - TOKENIZER_PATH=${TTS_TOKENIZER_PATH}
+      - PORT=${TTS_PORT}
+      - MAX_AUDIO_LENGTH=${TTS_MAX_AUDIO_LENGTH}
+    volumes:
+      - ${MODEL_BASE_PATH}:/models:ro
+      - ./configs:/app/configs:ro
+    ports:
+      - "${TTS_PORT}:${TTS_PORT}"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${TTS_PORT}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    networks:
+      - aether-voice-net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  omni-service:
+    build:
+      context: ./services/omni
+      dockerfile: Dockerfile
+    container_name: aether-omni
+    runtime: nvidia
+    environment:
+      - CUDA_VISIBLE_DEVICES=${GPU_DEVICE_ID}
+      - MODEL_PATH=${OMNI_MODEL_PATH}
+      - PORT=${OMNI_PORT}
+      - VLLM_MAX_MODEL_LEN=${VLLM_MAX_MODEL_LEN}
+      - VLLM_GPU_MEMORY_UTILIZATION=${VLLM_GPU_MEMORY_UTILIZATION}
+      - VLLM_DISABLE_V1=${VLLM_DISABLE_V1}
+    volumes:
+      - ${MODEL_BASE_PATH}:/models:ro
+    ports:
+      - "${OMNI_PORT}:${OMNI_PORT}"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${OMNI_PORT}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    networks:
+      - aether-voice-net
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: aether-voice-gateway
+    environment:
+      - PORT=${GATEWAY_PORT}
+      - LOG_LEVEL=${LOG_LEVEL}
+      - CORS_ORIGINS=${CORS_ORIGINS}
+      - SESSION_TTL=${SESSION_TTL}
+      - ASR_URL=http://asr-service:${ASR_PORT}
+      - TTS_URL=http://tts-service:${TTS_PORT}
+      - OMNI_URL=http://omni-service:${OMNI_PORT}
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - "${GATEWAY_PORT}:${GATEWAY_PORT}"
+    depends_on:
+      redis:
+        condition: service_healthy
+      asr-service:
+        condition: service_healthy
+      tts-service:
+        condition: service_healthy
+      omni-service:
+        condition: service_healthy
+    networks:
+      - aether-voice-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${GATEWAY_PORT}/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  redis_data:
+
+networks:
+  aether-voice-net:
+    driver: bridge

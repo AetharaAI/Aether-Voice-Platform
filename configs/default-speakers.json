@@ -1,0 +1,9 @@
+{
+  "custom_voices": [],
+  "settings": {
+    "max_reference_duration": 3.0,
+    "default_voice": "Vivian",
+    "supported_languages": ["zh", "en", "ja", "ko", "de", "fr", "ru", "pt", "es", "it"],
+    "sample_rate": 24000
+  }
+}

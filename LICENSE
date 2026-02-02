@@ -1,0 +1,238 @@
+================================================================================
+                     AETHER VOICE PLATFORM LICENSE
+                        AetherPro Technologies 2026
+================================================================================
+
+Copyright (c) 2026 AetherPro Technologies. All Rights Reserved.
+
+This License governs use of the Aether Voice Platform software and associated
+documentation files (the "Software").
+
+================================================================================
+                           1. DEFINITIONS
+================================================================================
+
+1.1 "AetherPro IP" means all original source code, configuration files,
+    documentation, build scripts, Docker configurations, and original creative
+    works created by AetherPro Technologies that are part of this Software,
+    excluding Third-Party IP.
+
+1.2 "Third-Party IP" means all software libraries, frameworks, models,
+    dependencies, and components that are incorporated into or used by the
+    Software, including but not limited to:
+    
+    - vLLM (Apache License 2.0)
+    - Qwen3 Models (Qwen License / Tongyi Qianwen License)
+    - PyTorch (BSD 3-Clause License)
+    - Transformers (Apache License 2.0)
+    - FastAPI (MIT License)
+    - Other dependencies as listed in requirements.txt files
+
+1.3 "Derivative Works" means any modification, adaptation, translation, or
+    transformation of the AetherPro IP.
+
+1.4 "You" means the individual or legal entity exercising permissions under
+    this License.
+
+================================================================================
+                           2. GRANT OF RIGHTS
+================================================================================
+
+2.1 PERMITTED USES
+    Subject to the terms and conditions of this License, AetherPro Technologies
+    grants You a worldwide, royalty-free, non-exclusive license to:
+
+    a) Use the Software for personal, academic, research, or commercial purposes;
+    b) Modify, adapt, and create Derivative Works of the AetherPro IP;
+    c) Distribute copies of the AetherPro IP and Derivative Works;
+    d) Sublicense Your rights to Third-Party IP in accordance with their
+       respective licenses.
+
+2.2 CONDITIONS
+    Your exercise of the rights granted in Section 2.1 is expressly made
+    subject to and conditioned upon compliance with Sections 3, 4, and 5.
+
+================================================================================
+                    3. OPEN SOURCE PRESERVATION REQUIREMENT
+================================================================================
+
+3.1 THIRD-PARTY IP PROTECTION
+    The Software incorporates Third-Party IP licensed under various open source
+    licenses. You agree to:
+
+    a) Maintain all copyright notices, license texts, and attribution statements
+       present in the Third-Party IP;
+    
+    b) Comply fully with the terms of each Third-Party IP license, including
+       but not limited to:
+       
+       - Apache License 2.0 (vLLM, Transformers, etc.)
+       - MIT License (FastAPI, Uvicorn, etc.)
+       - BSD License (PyTorch, NumPy, etc.)
+       - Qwen License (Qwen3 Models)
+    
+    c) Provide prominent notice in any distribution that Third-Party IP is
+       included and subject to separate license terms;
+    
+    d) Make available the source code of any modifications to Third-Party IP
+       as required by their respective licenses (copyleft requirements).
+
+3.2 SEPARATION OF CONCERNS
+    AetherPro IP and Third-Party IP are distinct. Your rights to use,
+    modify, and distribute Third-Party IP are governed solely by their
+    respective open source licenses, not by this License.
+
+================================================================================
+                       4. AETHERPRO IP PROVISIONS
+================================================================================
+
+4.1 OWNERSHIP
+    AetherPro Technologies retains all right, title, and interest in and to
+    the AetherPro IP, including all intellectual property rights therein.
+    This License does not grant You any ownership interest in the AetherPro IP.
+
+4.2 ATTRIBUTION REQUIREMENT
+    You must retain and reproduce in all copies of the AetherPro IP:
+
+    a) This License text in its entirety;
+    b) All copyright notices present in the AetherPro IP;
+    c) The following attribution notice in a prominent location:
+
+       "Powered by Aether Voice Platform
+        Copyright (c) 2026 AetherPro Technologies
+        https://aetherpro.com"
+
+4.3 MODIFICATION NOTICES
+    For any Derivative Works of the AetherPro IP, You must:
+
+    a) Document and describe all changes made to the original AetherPro IP;
+    b) Include the date of modification;
+    c) State that the modified version is a Derivative Work;
+    d) Ensure that the attribution notice in Section 4.2 is preserved.
+
+4.4 NO ENDORSEMENT
+    You may not use the name "AetherPro Technologies," "Aether Voice Platform,"
+    or any AetherPro trademarks to endorse or promote products derived from
+    this Software without prior written permission.
+
+================================================================================
+                       5. RESTRICTIONS AND LIMITATIONS
+================================================================================
+
+5.1 YOU MAY NOT:
+
+    a) Remove or alter any copyright, license, or attribution notices from the
+       AetherPro IP or Third-Party IP;
+    
+    b) Use AetherPro trademarks without express written permission;
+    
+    c) Hold AetherPro Technologies liable for any claim, damages, or other
+       liability arising from Your use of the Software;
+    
+    d) Circumvent or disable any license enforcement or usage tracking
+       mechanisms, if present.
+
+5.2 MODEL WEIGHTS
+    The Software is designed to work with Qwen3 model weights which are
+    subject to separate license terms from Tongyi Qianwen / Alibaba Cloud.
+    You are responsible for obtaining and complying with the applicable
+    model licenses.
+
+================================================================================
+                          6. PATENT RIGHTS
+================================================================================
+
+6.1 PATENT GRANT
+    Subject to the terms of this License, AetherPro Technologies grants You
+    a perpetual, worldwide, non-exclusive, no-charge, royalty-free patent
+    license to make, use, sell, offer for sale, import, and otherwise
+    transfer the AetherPro IP.
+
+6.2 PATENT RETALIATION
+    If You institute patent litigation against anyone alleging that the
+    AetherPro IP infringes Your patents, Your rights under this License
+    terminate automatically.
+
+================================================================================
+                          7. DISCLAIMER OF WARRANTY
+================================================================================
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+AETHERPRO TECHNOLOGIES OR THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+================================================================================
+                       8. LIMITATION OF LIABILITY
+================================================================================
+
+IN NO EVENT AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE),
+CONTRACT, OR OTHERWISE, UNLESS REQUIRED BY APPLICABLE LAW, SHALL AETHERPRO
+TECHNOLOGIES BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY DIRECT, INDIRECT,
+SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR
+INABILITY TO USE THE SOFTWARE.
+
+================================================================================
+                         9. TERMINATION
+================================================================================
+
+9.1 This License and the rights granted hereunder will terminate automatically
+    if You fail to comply with any term of this License.
+
+9.2 Upon termination, You must cease all use and distribution of the AetherPro
+    IP, but provisions that by their nature should survive termination
+    (Sections 3, 4, 7, 8, and 10) shall survive.
+
+================================================================================
+                       10. GENERAL PROVISIONS
+================================================================================
+
+10.1 ENTIRE AGREEMENT
+     This License constitutes the entire agreement between You and AetherPro
+     Technologies concerning the Software.
+
+10.2 SEVERABILITY
+     If any provision of this License is held invalid or unenforceable, the
+     remaining provisions shall continue in full force and effect.
+
+10.3 GOVERNING LAW
+     This License shall be governed by and construed in accordance with the
+     laws of the jurisdiction in which AetherPro Technologies is established,
+     without regard to conflict of law principles.
+
+10.4 AMENDMENTS
+     AetherPro Technologies reserves the right to modify this License at any
+     time. Your continued use of the Software following any such modification
+     constitutes Your acceptance of the modified terms.
+
+================================================================================
+                         11. THIRD-PARTY NOTICES
+================================================================================
+
+This Software includes or depends upon the following open source components:
+
+- vLLM         : Apache License 2.0 (https://github.com/vllm-project/vllm)
+- Qwen3 Models : Qwen License (https://github.com/QwenLM/Qwen3)
+- PyTorch      : BSD 3-Clause License (https://pytorch.org/)
+- Transformers : Apache License 2.0 (https://huggingface.co/transformers)
+- FastAPI      : MIT License (https://fastapi.tiangolo.com/)
+
+Full license texts for Third-Party IP are available in the THIRD_PARTY_LICENSES
+file or at the respective project repositories.
+
+================================================================================
+                          CONTACT INFORMATION
+================================================================================
+
+For licensing inquiries, commercial support, or permissions requests:
+
+AetherPro Technologies
+Email: legal@aetherpro.com
+Web: https://aetherpro.com
+
+================================================================================
+END OF LICENSE
+================================================================================
