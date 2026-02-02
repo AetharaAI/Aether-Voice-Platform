@@ -1,7 +1,11 @@
 .PHONY: build start stop logs test clean verify
 
-# Configuration
-export $(shell sed 's/=.*//' .env 2>/dev/null || echo "")
+# Load environment variables from .env file if it exists
+ifneq (,$(wildcard .env))
+    include .env
+    export
+endif
+
 COMPOSE=docker-compose -f docker-compose.yml
 
 build:
