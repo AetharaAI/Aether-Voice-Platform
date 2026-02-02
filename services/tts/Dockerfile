@@ -52,7 +52,6 @@ WORKDIR /app
 
 # Copy source
 COPY src/ /app/src/
-COPY configs/ /app/configs/
 
 EXPOSE 8002
 
