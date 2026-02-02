@@ -21,12 +21,12 @@ RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 # Upgrade pip
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install vLLM with audio support (stable version for ASR)
-# Qwen3-ASR works with standard vLLM 0.9.2
+# Install vLLM with compatible PyTorch version
+# vLLM 0.9.2 requires torch>=2.7.0
 RUN pip install --no-cache-dir \
     vllm==0.9.2 \
-    torch==2.6.0 \
-    torchaudio==2.6.0 \
+    torch==2.7.0 \
+    torchaudio==2.7.0 \
     transformers==4.51.3 \
     accelerate==0.30.1 \
     fastapi==0.115.12 \

@@ -26,8 +26,8 @@ RUN pip install --no-cache-dir \
 
 # If git install fails, we'll install from PyPI fallback
 RUN pip install --no-cache-dir \
-    torch==2.6.0 \
-    torchaudio==2.6.0 \
+    torch==2.7.0 \
+    torchaudio==2.7.0 \
     transformers==4.51.3 \
     accelerate==0.30.1
 
@@ -42,7 +42,7 @@ RUN pip install --no-cache-dir \
     uvicorn[standard]==0.34.2 \
     python-multipart==0.0.20 \
     pydantic==2.11.0 \
-    numpy==2.1.2 \
+    numpy==2.2.0 \
     soundfile==0.13.1 \
     librosa==0.11.0 \
     audioread==3.0.1 \

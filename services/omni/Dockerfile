@@ -26,11 +26,11 @@ RUN pip install --no-cache-dir \
 
 # Core dependencies
 RUN pip install --no-cache-dir \
-    torch==2.6.0 \
-    torchaudio==2.6.0 \
+    torch==2.7.0 \
+    torchaudio==2.7.0 \
     transformers==4.51.3 \
     accelerate==0.30.1 \
-    numpy==2.1.2 \
+    numpy==2.2.0 \
     scipy==1.15.2
 
 # API and audio
