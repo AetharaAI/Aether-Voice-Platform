@@ -1,8 +1,9 @@
 FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
 
+# Critical: Disable V1 engine for audio support
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
-ENV VLLM_USE_V1=0  # Critical: Disable V1 engine for audio support
+ENV VLLM_USE_V1=0
 
 # System dependencies
 RUN apt-get update && apt-get install -y \
