@@ -34,9 +34,17 @@ async def lifespan(app: FastAPI):
     global session_manager, asr_client, tts_client, omni_client
     
     logger.info("🚀 Initializing API Gateway...")
+    logger.info(f"Redis URL: {settings.redis_url}")
     
     # Initialize clients
-    session_manager = SessionManager(settings.redis_url, settings.session_ttl)
+    try:
+        session_manager = SessionManager(settings.redis_url, settings.session_ttl)
+        logger.info("✅ Redis connected")
+    except Exception as e:
+        logger.warning(f"⚠️ Redis connection failed: {e}")
+        logger.warning("Running without session persistence")
+        session_manager = None
+    
     asr_client = ASRClient()
     tts_client = TTSClient()
     omni_client = OmniClient()

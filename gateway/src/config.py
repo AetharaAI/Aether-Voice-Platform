@@ -10,8 +10,9 @@ class Settings(BaseSettings):
     # CORS
     cors_origins: str = "http://localhost:3000,http://localhost:16382"
     
-    # Redis
-    redis_url: str = "redis://redis:6379/0"
+    # Redis (external Redis Stack on port 6390)
+    # Use host.docker.internal to reach host from container
+    redis_url: str = "redis://host.docker.internal:6390/0"
     session_ttl: int = 3600  # 1 hour
     
     # Upstream Services

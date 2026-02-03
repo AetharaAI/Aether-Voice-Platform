@@ -1,11 +1,14 @@
 version: "3.8"
 
 services:
+  # Built-in Redis - disabled when using external Redis
+  # Comment out or set USE_BUILTIN_REDIS=false in .env to use external Redis
   redis:
     image: redis:7-alpine
     container_name: aether-voice-redis
+    profiles: ["with-redis"]  # Only start when explicitly requested
     ports:
-      - "${REDIS_PORT}:6379"
+      - "6379:6379"
     volumes:
       - redis_data:/data
     healthcheck:
@@ -31,8 +34,11 @@ services:
       - VLLM_GPU_MEMORY_UTILIZATION=${VLLM_GPU_MEMORY_UTILIZATION}
     volumes:
       - ${MODEL_BASE_PATH}:/models:ro
+    # Internal port only - not exposed externally
+    expose:
+      - "${ASR_PORT}"
     ports:
-      - "${ASR_PORT}:${ASR_PORT}"
+      - "127.0.0.1:${EXPOSED_ASR_PORT}:${ASR_PORT}"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${ASR_PORT}/health"]
       interval: 30s
@@ -64,8 +70,11 @@ services:
     volumes:
       - ${MODEL_BASE_PATH}:/models:ro
       - ./configs:/app/configs:ro
+    # Internal port only - not exposed externally
+    expose:
+      - "${TTS_PORT}"
     ports:
-      - "${TTS_PORT}:${TTS_PORT}"
+      - "127.0.0.1:${EXPOSED_TTS_PORT}:${TTS_PORT}"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${TTS_PORT}/health"]
       interval: 30s
@@ -97,8 +106,9 @@ services:
       - VLLM_DISABLE_V1=${VLLM_DISABLE_V1}
     volumes:
       - ${MODEL_BASE_PATH}:/models:ro
+    # Exposed externally on port 8003
     ports:
-      - "${OMNI_PORT}:${OMNI_PORT}"
+      - "${EXPOSED_OMNI_PORT}:${OMNI_PORT}"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:${OMNI_PORT}/health"]
       interval: 30s
@@ -128,12 +138,15 @@ services:
       - ASR_URL=http://asr-service:${ASR_PORT}
       - TTS_URL=http://tts-service:${TTS_PORT}
       - OMNI_URL=http://omni-service:${OMNI_PORT}
-      - REDIS_URL=redis://redis:6379/0
+      - REDIS_URL=redis://host.docker.internal:6390/0
+    # Exposed externally on port 8004
     ports:
-      - "${GATEWAY_PORT}:${GATEWAY_PORT}"
+      - "${EXPOSED_GATEWAY_PORT}:${GATEWAY_PORT}"
+    # Enable host.docker.internal access
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # Remove Redis dependency - use external Redis
     depends_on:
-      redis:
-        condition: service_healthy
       asr-service:
         condition: service_healthy
       tts-service:
@@ -150,6 +163,7 @@ services:
 
 volumes:
   redis_data:
+    driver: local
 
 networks:
   aether-voice-net:
