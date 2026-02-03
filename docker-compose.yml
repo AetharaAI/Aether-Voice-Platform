@@ -146,13 +146,6 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     # Remove Redis dependency - use external Redis
-    depends_on:
-      asr-service:
-        condition: service_healthy
-      tts-service:
-        condition: service_healthy
-      omni-service:
-        condition: service_healthy
     networks:
       - aether-voice-net
     healthcheck:
