@@ -2,7 +2,7 @@ import websockets
 import json
 import logging
 from typing import Optional, Callable, AsyncGenerator
-from config import settings
+from ..config import settings
 
 logger = logging.getLogger(__name__)
 

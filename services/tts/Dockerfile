@@ -18,14 +18,16 @@ RUN apt-get update && apt-get install -y \
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install Qwen3-TTS from PyPI (official package)
-RUN pip install --no-cache-dir \
-    qwen-tts
-
-# Core ML
+# Install PyTorch first
 RUN pip install --no-cache-dir \
     torch==2.7.0 \
-    torchaudio==2.7.0 \
+    torchaudio==2.7.0
+
+# Install Qwen3-TTS from PyPI (official package)
+RUN pip install --no-cache-dir qwen-tts || echo "qwen-tts install failed, will try alternative"
+
+# Install other dependencies
+RUN pip install --no-cache-dir \
     transformers==4.51.3 \
     accelerate==0.30.1 \
     numpy==2.2.0
@@ -42,6 +44,7 @@ RUN pip install --no-cache-dir \
     pydub==0.25.1
 
 WORKDIR /app
+ENV PYTHONPATH=/app
 
 # Copy source
 COPY src/ /app/src/

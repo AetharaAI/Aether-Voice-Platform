@@ -12,8 +12,8 @@ from typing import Optional, Literal, AsyncGenerator
 import io
 import base64
 
-from voice_manager import VoiceManager, VoiceConfig, VoiceMode
-from audio_utils import AudioProcessor
+from .voice_manager import VoiceManager, VoiceConfig, VoiceMode
+from .audio_utils import AudioProcessor
 
 logging.basicConfig(
     level=logging.INFO,

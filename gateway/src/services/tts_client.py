@@ -1,7 +1,7 @@
 import httpx
 import logging
 from typing import Optional, Literal
-from config import settings
+from ..config import settings
 
 logger = logging.getLogger(__name__)
 

@@ -8,11 +8,11 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from config import settings
-from session_manager import SessionManager
-from services.asr_client import ASRClient
-from services.tts_client import TTSClient, VoiceMode
-from services.omni_client import OmniClient
+from .config import settings
+from .session_manager import SessionManager
+from .services.asr_client import ASRClient
+from .services.tts_client import TTSClient, VoiceMode
+from .services.omni_client import OmniClient
 
 logging.basicConfig(
     level=getattr(logging, settings.log_level.upper()),

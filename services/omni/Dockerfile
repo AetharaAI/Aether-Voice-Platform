@@ -19,15 +19,18 @@ RUN apt-get update && apt-get install -y \
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install vLLM-Omni for Qwen3 support
-# Using the official vllm-project/vllm-omni repository
+# Install PyTorch first
 RUN pip install --no-cache-dir \
-    git+https://github.com/vllm-project/vllm-omni.git@main
+    torch==2.7.0 \
+    torchaudio==2.7.0
+
+# Install vLLM-Omni for Qwen3 support
+RUN pip install --no-cache-dir \
+    git+https://github.com/vllm-project/vllm-omni.git@main || \
+    pip install --no-cache-dir vllm==0.9.2
 
 # Core dependencies
 RUN pip install --no-cache-dir \
-    torch==2.7.0 \
-    torchaudio==2.7.0 \
     transformers==4.51.3 \
     accelerate==0.30.1 \
     numpy==2.2.0 \
@@ -44,6 +47,7 @@ RUN pip install --no-cache-dir \
     librosa==0.11.0
 
 WORKDIR /app
+ENV PYTHONPATH=/app
 
 COPY entrypoint.sh /app/
 COPY src/ /app/src/

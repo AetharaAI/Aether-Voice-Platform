@@ -21,24 +21,27 @@ RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 # Upgrade pip
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
-# Install vLLM with compatible PyTorch version
-# vLLM 0.9.2 requires torch>=2.7.0
+# Install PyTorch first (vLLM dependency)
+RUN pip install --no-cache-dir \
+    torch==2.7.0 \
+    torchaudio==2.7.0
+
+# Install vLLM and other dependencies
 RUN pip install --no-cache-dir \
     vllm==0.9.2 \
-    torch==2.7.0 \
-    torchaudio==2.7.0 \
     transformers==4.51.3 \
     accelerate==0.30.1 \
     fastapi==0.115.12 \
     uvicorn[standard]==0.34.2 \
     python-multipart==0.0.20 \
     pydantic==2.11.0 \
-    numpy==2.1.2 \
+    numpy==2.2.0 \
     soundfile==0.13.1 \
     librosa==0.11.0
 
 # Create app directory
 WORKDIR /app
+ENV PYTHONPATH=/app
 
 # Copy application code
 COPY src/ /app/src/
