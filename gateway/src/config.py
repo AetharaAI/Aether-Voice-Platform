@@ -4,7 +4,7 @@ from typing import List, Optional
 
 class Settings(BaseSettings):
     # Server
-    port: int = 8080
+    port: int = 8004
     log_level: str = "info"
     
     # CORS
